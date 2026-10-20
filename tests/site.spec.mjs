@@ -22,7 +22,7 @@ test('homepage: message, navigation, media, layout, keyboard', async ({ page }, 
   if (await mobileMenu.isVisible()) {
     await mobileMenu.click();
     await expect(mobileMenu).toHaveAttribute('aria-expanded','true');
-    await expect(page.getByRole('link',{name:'The founder'})).toBeVisible();
+    await expect(page.getByRole('link',{name:'About'})).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(mobileMenu).toHaveAttribute('aria-expanded','false');
   }
